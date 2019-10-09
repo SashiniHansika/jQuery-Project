@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css//style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h3>Dialog Box Example in jQuery</h3>
+        <div>
+            <button id="btn1">Click me</button>
+        </div>
+        <div id="dialog" title="">
+                <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+        </div>                     
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryui/jquery-ui.js"></script>
+    <script>
+        $("#btn1").click(function(){
+            $("#dialog").dialog({
+                title:"Basic dialog",
+                draggable: true,
+                resizable: true,
+                // When dialog box opens cannot access background elements
+                modal:true,
+                // Insert buttons to message box
+                buttons:[
+                    {
+                        text:"Close",
+                        icon:"ui-icon-heart",
+                        click: function(){
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+                        text:"Ok",
+                        icon:"ui-icon-heart",
+                        click: function(){
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+        });
+        
+    </script>
+</html> 
