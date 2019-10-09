@@ -7,19 +7,22 @@
     </head>
     <body>
        <div id="mydiv">
-           <h3>jquery date time picker</h3>
-           <input type="text" name="inputTxtDate" id="inputTxtDate" placeholder="Click to input date">
-       </div>  
+           <h3>ToolTip in Jquery UI</h3>
+           <img src="img/img2.jpg" alt="image" 
+           width="200px" title="" id="img1">
+        </div>  
     </body>
     <script src="js/jquery.js"></script>
     <script src="jqueryui/jquery-ui.js"></script>
     <script>
-        $("#inputTxtDate").datepicker({
-            numberOfMonths: 1,
-            changeYear:true,
-            changeMonth : true,
-            showWeek: true,
-            showOtherMonths: true
-        })
+        $("img").tooltip({
+            //tool tip near the cursor
+            track: true,
+            //Dynamically add text to the title
+            content:"Enjoy youself...",
+            show:{
+                effect:"bounce", duration:2000
+            }
+        });
     </script>
 </html>
