@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css//style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h3>Auto complete Example in jQuery</h3>
+        <div id="div1">
+            Enter your favorite programming language:
+            <input type="text" name="txt1" id="txt1">
+        </div>
+                             
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryui/jquery-ui.js"></script>
+    <script>
+         var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+        
+    $("#txt1").autocomplete({
+        source : availableTags
+    },{
+        autoFocus : true,
+        delay:0,
+        minLength:2
+    });
+    </script>
+</html> 
