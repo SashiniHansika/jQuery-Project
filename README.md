@@ -1,4 +1,4 @@
-This repository includes some exercise related to the jQuery and jQuery UI.
+This repository includes some exercises related to the jQuery and jQuery UI.
 
 References:
 
